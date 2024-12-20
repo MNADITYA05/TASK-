@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "author": "little stars",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-nano", "id": "nano", "top": 24, "left": -48.5, "attrs": {} },
+    { "type": "wokwi-lcd1602", "id": "lcd1", "top": -188.57, "left": -51.2, "attrs": {} },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht1",
+      "top": 141.9,
+      "left": -13.2,
+      "rotate": 180,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [ "lcd1:VSS", "nano:GND.2", "green", [ "v57.6", "h96", "v9.6" ] ],
+    [ "lcd1:VDD", "nano:5V", "green", [ "v48", "h172.9", "v124.8", "h-86.4" ] ],
+    [ "lcd1:V0", "nano:GND.1", "green", [ "v28.8", "h134.1", "v124.8" ] ],
+    [ "lcd1:RS", "nano:12", "green", [ "v67.2", "h-38.1" ] ],
+    [ "lcd1:RW", "nano:GND.2", "green", [ "v67.2", "h57.5", "v9.6" ] ],
+    [ "lcd1:E", "nano:11", "green", [ "v76.8", "h-48" ] ],
+    [ "lcd1:D4", "nano:4", "green", [ "v76.8", "h-28.8" ] ],
+    [ "lcd1:D5", "nano:5", "green", [ "v0" ] ],
+    [ "lcd1:D6", "nano:6", "green", [ "v0" ] ],
+    [ "lcd1:D7", "nano:7", "green", [ "v0" ] ],
+    [ "lcd1:A", "nano:5V", "green", [ "v0" ] ],
+    [ "lcd1:K", "nano:GND.1", "green", [ "v0" ] ],
+    [ "dht1:VCC", "nano:5V", "red", [ "v0" ] ],
+    [ "dht1:GND", "nano:GND.1", "black", [ "v0" ] ],
+    [ "dht1:SDA", "nano:2", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
